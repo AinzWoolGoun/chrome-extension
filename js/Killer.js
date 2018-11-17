@@ -21,6 +21,7 @@ function kill(){
   var ad5=document.getElementById("adContent");
   var ad6=document.getElementsByClassName("recommend-item-box recommend-ad-box");
   var ad7=document.getElementsByClassName("p4course_target");
+  var ad8=document.getElementsByClassName("wrap");
 
   if(ad1.length>0){
       ad1[0].parentNode.removeChild(ad1[0]);
@@ -45,6 +46,9 @@ function kill(){
   }
   if(ad7.length>0){
     ad7[0].style.visibility="hidden";
+  }
+  if(ad8.length>0){
+    ad8[0].style.visibility="hidden";
   }
 }
 kill();
