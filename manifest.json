@@ -13,6 +13,12 @@
       "js":["js/Killer.js"],
       "run_at":"document_end",
       "all_frames":true
+    },
+    {
+      "matches":["*://bbs.csdn.net/*"],
+      "js":["js/Killer2.js"],
+      "run_at":"document_end",
+      "all_frames":true
     }
   ]
 
