@@ -53,9 +53,12 @@ function kill(){
     ad7[0].style.visibility="hidden";
   }
 
-  var ad8=document.getElementsByClassName("wrap");
+  var ad8=document.getElementsByClassName("mediav_ad");
   if(ad8.length>0){
-    ad8[0].style.visibility="hidden";
+    var len=ad8.length;
+    for(var i=0;i<len;i++){
+        ad8[0].parentNode.removeChild(ad8[0]);
+    }
   }
 
   var ad9=document.getElementsByClassName("aside-box custom-box");
