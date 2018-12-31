@@ -4,21 +4,28 @@ function kill(){
     button[0].click();
   }
 
-  var ad1=document.getElementsByClassName("mediav_ad");
-  var ad2=document.getElementsByClassName("pulllog-box");
-  var ad3=document.getElementById("adContent");
+  let classnames=["mediav_ad",
+                  "pulllog-box",
+                  "adsbygoogle",
+                  "img-wrapper"];
 
-  if(ad1.length>0){
-    var len=ad1.length;
-    for(var i=1;i<=len;i++){
-      ad1[0].parentNode.removeChild(ad1[0]);
+  let idnames=["adContent"];
+
+  for(var name=0;name<classnames.length;name++){
+    var ad=document.getElementsByClassName(classnames[name]);
+    if(ad.length>0){
+      var len=ad.length;
+      for(var i=1;i<=len;i++){
+        ad[0].parentNode.removeChild(ad[0]);
+      }
     }
   }
-  if(ad2.length>0){
-    ad2[0].parentNode.removeChild(ad2[0]);
-  }
-  if(ad3!=null){
-      ad3.parentNode.removeChild(ad3);
+
+  for(var name=0;name<idnames.length;name++){
+    var ad=document.getElementById(idnames[name]);
+    if(ad!=null){
+        ad.parentNode.removeChild(ad);
+    }
   }
 
 }
