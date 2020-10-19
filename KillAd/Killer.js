@@ -1,5 +1,5 @@
 function kill(){
-  var button1=document.getElementById("btn-readmore");
+  var button1=document.getElementsByClassName("btn-readmore")[0];
   if(button1!=null){
     button1.click();
   }
@@ -25,10 +25,16 @@ function kill(){
                   "aside-box custom-box",
                   "light-box",
                   "indexSuperise",
-                  "blog_star_enter"];
+                  "blog_star_enter",
+                  "pic_container"];
 
   let idnames=["asideFooter",
-              "adContent"];
+              "adContent",
+              "img-txt-wrapper",
+              "container",
+              "google-center-div",
+              "gwd-ad",
+              "kp_box_57"];
 
   for(var name=0;name<classnames.length;name++){
     var ad=document.getElementsByClassName(classnames[name]);

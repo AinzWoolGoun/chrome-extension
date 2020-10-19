@@ -2,24 +2,20 @@
   "name":"All",
   "version":"1.0",
   "manifest_version":2,
-  "description":"Kill AD And RightClick Search ",
+  "description":"Make My Day",
   "permissions":["contextMenus","tabs"],
   "background":{
-    "scripts":["js/Search.js"]
+    "scripts":["Background/background.js"]
   },
   "content_scripts":[
     {
-      "matches":["*://blog.csdn.net/*"],
-      "js":["js/Killer.js"],
+      "matches":["*://blog.csdn.net/*","*://bbs.csdn.net/*"],
+      "js":["KillAd/Killer.js","KillAd/Killer2.js"],
       "run_at":"document_end",
       "all_frames":true
-    },
-    {
-      "matches":["*://bbs.csdn.net/*"],
-      "js":["js/Killer2.js"],
-      "run_at":"document_end",
-      "all_frames":true
-    }
-  ]
-
+    }],
+  "browser_action":{
+		"default_title": "ToolBox",
+		"default_popup": "popup/popup.html"
+	}
 }

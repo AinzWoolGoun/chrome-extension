@@ -13,3 +13,12 @@ chrome.contextMenus.create({
     chrome.tabs.create({url:"https://translate.google.cn/#en/zh-CN/"+encodeURI(params.selectionText)})
   }
 });
+
+chrome.contextMenus.create({
+  title:"ImgReader",
+  contexts:["browser_action"],
+  onclick:function(info,tab){
+    chrome.tabs.create({url:'../ImgReader/imgReader.html'});
+  }
+});
+
